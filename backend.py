@@ -1,6 +1,14 @@
-import requests
+import os
 
-API_KEY = "8f58ed60f5ff89d02df91d1b8631b2a8"
+import requests
+import os
+from dotenv import  load_dotenv
+
+load_dotenv(".env")
+
+API_KEY = os.getenv("API_KEY")
+
+
 
 
 def get_data(place, forecast_days=None):
@@ -14,4 +22,4 @@ def get_data(place, forecast_days=None):
 
 
 if __name__ == "__main__":
-    print(get_data(place="tokyo", forecast_days=3))
+    print("Heloo")
